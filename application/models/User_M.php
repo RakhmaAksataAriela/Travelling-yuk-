@@ -9,5 +9,23 @@ class User_M extends CI_Model{
 		);
 		return $this->db->insert('user', $data_user);
 	}
+
+	public function gets(){
+		return $this->db->get('user');
+	}
+
+	public function delete($id)
+	{
+		$this->db->where('id',$id);
+		return $this->db->delete('user');
+	}
+
+	// //buat sprint 
+	// {
+	// 	//tampil
+	// }
+	// {
+	// 	//delete
+	// }
 }
 ?>
